@@ -511,7 +511,7 @@ const Home = () => {
                                                 onChange={(e) => handleBirthdayPartChange('day', e.target.value)}
                                                 className={`w-full appearance-none rounded-[16px] border px-4 py-3 pr-10 text-base font-medium text-[#1d1f23] bg-white shadow-sm focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 transition ${errors.birthday ? 'border-[#dc3545]' : 'border-[#cbd5e1]'}`}
                                             >
-                                                <option value='' disabled hidden>Day</option>
+                                                <option value='' disabled hidden style={{ display: 'none' }}>Day</option>
                                                 {Array.from({ length: getDaysInMonth(birthdayParts.year, birthdayParts.month) }, (_, index) => {
                                                     const day = String(index + 1).padStart(2, '0');
                                                     return (
@@ -532,7 +532,7 @@ const Home = () => {
                                                 onChange={(e) => handleBirthdayPartChange('month', e.target.value)}
                                                 className={`w-full appearance-none rounded-[16px] border px-4 py-3 pr-10 text-base font-medium text-[#1d1f23] bg-white shadow-sm focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 transition ${errors.birthday ? 'border-[#dc3545]' : 'border-[#cbd5e1]'}`}
                                             >
-                                                <option value='' disabled hidden>Month</option>
+                                                <option value='' disabled hidden style={{ display: 'none' }}>Month</option>
                                                 {monthNames.map((month) => (
                                                     <option key={month} value={month}>
                                                         {month}
@@ -550,7 +550,7 @@ const Home = () => {
                                                 onChange={(e) => handleBirthdayPartChange('year', e.target.value)}
                                                 className={`w-full appearance-none rounded-[16px] border px-4 py-3 pr-10 text-base font-medium text-[#1d1f23] bg-white shadow-sm focus:border-[#3b82f6] focus:ring-2 focus:ring-[#3b82f6]/20 transition ${errors.birthday ? 'border-[#dc3545]' : 'border-[#cbd5e1]'}`}
                                             >
-                                                <option value='' disabled hidden>Year</option>
+                                                <option value='' disabled hidden style={{ display: 'none' }}>Year</option>
                                                 {years.map((year) => (
                                                     <option key={year} value={year}>
                                                         {year}
